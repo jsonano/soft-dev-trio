@@ -3,7 +3,7 @@
 # SoftDev
 # K05 - Processing Bitstreams
 # 2024 - 9 - 17
-# Time spent:
+# Time spent: 0.4 hours
 import random as r
 
 dict = {}
