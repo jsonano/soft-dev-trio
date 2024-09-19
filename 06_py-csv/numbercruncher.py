@@ -11,7 +11,7 @@ with open('occupations.csv', 'r') as file:
 del dict['Total'] # removing "Total" key-value pair
 
 all_occupations = list(dict.keys())
-occupation_weights = []
+occupation_weights = [x / 100 for x in dict.values()]
 for weight in dict.values():
     occupation_weights.append(float(weight) / 100)
 print(choices(population = all_occupations, weights = occupation_weights))
