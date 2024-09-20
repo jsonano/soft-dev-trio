@@ -36,6 +36,7 @@ def random_selection(dict):
     occupation_weights = [float(x) / 100 for x in dict.values()] # converting percentages into decimals | 5.5 --> 0.055
     # print(all_occupations)
     # print(occupation_weights)
-    print(choices(all_occupations, weights = occupation_weights)) # random.choices(list, weighted_percentages)
+    string = str(choices(all_occupations, weights = occupation_weights)) # random.choices(list, weighted_percentages)
+    return string[2 : len(string) - 2]
 
-random_selection(occupations_dict)
+print(random_selection(occupations_dict))
