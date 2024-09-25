@@ -3,7 +3,7 @@
 # SoftDev
 # K09 -- Flask
 # 2024 - 9 - 24
-# Time spent: 1 hour
+# Time spent: 1.5 hours
 
 from flask import Flask
 app = Flask(__name__)
