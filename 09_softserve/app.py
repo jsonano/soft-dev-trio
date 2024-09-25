@@ -1,5 +1,5 @@
 # Jason Chao, Ivan Gontchar, Tahmim Hassan
-# The Fire Wizards
+# The Fire Marshals
 # SoftDev
 # K09 -- Flask
 # 2024 - 9 - 24
@@ -34,9 +34,14 @@ def output1():
     string = ""
     for occupation in occupations_dict:
         string += occupation + "<br>"
-    return f'<strong>ALL OCCUPATIONS</strong><br> {string} <br><strong>Selected Occupation | {random_selection(occupations_dict)}</strong>'
+    return f'''
+            The Fire Marshals <br>
+            Jason Chao, Ivan Gontchar, Tahmim Hassan <br><br>
+            <strong>ALL OCCUPATIONS</strong><br> {string}
+            <br><strong>Selected Occupation | {random_selection(occupations_dict)}</strong>
+            '''
 
 # def output2():
 #     return random_selection(occupations_dict)
-    
+
 app.run()
