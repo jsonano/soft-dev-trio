@@ -34,8 +34,9 @@ del occupations_dict['Total'] # removing "Total" key-value pair
 def random_selection(dict):
     all_occupations = list(dict.keys())
     occupation_weights = [float(x) / 100 for x in dict.values()] # converting percentages into decimals | 5.5 --> 0.055
-    # print(all_occupations)
-    # print(occupation_weights)
+    print(all_occupations)
+    print(occupation_weights)
+    print(occupations_dict)
     string = str(choices(all_occupations, weights = occupation_weights)) # random.choices(list, weighted_percentages)
     return string[2 : len(string) - 2]
 
