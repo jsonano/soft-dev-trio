@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- 
+Jason Chao
+The Fire Marshals | Ivan, Tanzeem, and Jason
+SoftDev
+K12 - Combinations
+2024 - 10 - 01
+Time spent: 1.5 hours
+-->
+
+<html>
+    <head>
+        <title> {{ title }} </title>
+        <style>
+            tr, th, td {
+                border: 1px solid black;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> {{ heading }} </h1>
+        <p> {{ team_info }} </p>
+        <p> {{ random_selection }} </p>
+        <table>
+            <tr>
+                <th> {{ occupations[0][0] }} </th>
+                <th> {{ occupations[0][1] }} </th>
+                <th> {{ occupations[0][2] }} </th>
+            </tr>
+            {% for row in occupations[1:] %}
+                <tr>
+                    <td> {{ row[0] }} </td>
+                    <td> {{ row[1] }} </td>
+                    <td> <a href="{{ row[2] }}" target = "_blank">Link</a> </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
