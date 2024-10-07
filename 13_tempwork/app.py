@@ -22,13 +22,17 @@ occupation_weights = [float(row[1]) / 100 for row in occupations_lst[1 : len(occ
 # print(all_occupations)
 # print(occupation_weights)
 # print(occupations_lst)
-choice = choices(all_occupations, weights = occupation_weights)
-random_occupation = choice[0][0]
-random_percentage = choice[0][1]
-string = f'Randomly Occupation: {random_occupation} | Percentage: {random_percentage}'
+# choice = choices(all_occupations, weights = occupation_weights)
+# random_occupation = choice[0][0]
+# random_percentage = choice[0][1]
+# string = f'Randomly Occupation: {random_occupation} | Percentage: {random_percentage}'
 
 @app.route("/wdywtbwygp")
 def home():
+    choice = choices(all_occupations, weights = occupation_weights)
+    random_occupation = choice[0][0]
+    random_percentage = choice[0][1]
+    string = f'Randomly Occupation: {random_occupation} | Percentage: {random_percentage}'
     return render_template("tablified.html", 
                            title = 'Tablified Occupations',
                            heading = 'Choosing Random Occupations with a Table',
