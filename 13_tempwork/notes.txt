@@ -1,8 +1,16 @@
 DISCO:
- - 
+ - HTML template placeholders can be utilized practically anywhere, as long as the syntax is correct.
 
 EGO:
- - 
+I agree with the main points of this excerpt. It is natural for most programmers to miss glaring bugs in their programs.
+That demonstrates the importance of collaboration with and revision by other fellow programmers. In the previous section of the article,
+it states that most programmers are socially detached, and I somewhat embody this fact. It is much easier to focus and program
+when alone. However, in the end, it is detrimental to our work. The easiest and most efficient way to debug is for another person to 
+help, and in the end, you can learn from their revisions. 
 
-QCC:
- - 
+QCC: (these are the same questions my group had)
+- Is there a "most optimal" way to do this?
+- Is there a way to use if statements or other more traditional code writing practices?
+- What is the code in the "{%...%}"? Is this some kind of notation that puts Python on the inside? We assume not, since
+  the "{% endfor %}" is not part of Python. If not, then what coding language is this? Where can we find a reference for this?
+  Should we expect to use this on higher levels than a for-loop in the future?
