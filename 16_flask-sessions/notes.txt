@@ -7,6 +7,3 @@ Plan:
 
 DISCO:
 * from flask import redirect --> redirect(route) sends a user to the route
-
-QCC:
-* how do you make the logout button send the user to the login page?
