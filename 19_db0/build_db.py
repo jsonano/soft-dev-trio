@@ -1,15 +1,15 @@
 # Evan Chan, Jason Chao, Victor Casado - The Flying Mice
-#SoftDev
-#skeleton/stub :: SQLITE3 BASICS
-#Oct 20 2024
+# SoftDev
+# 19 - SQLITE3 BASICS
+# Oct - 20 - 2024
 
 import sqlite3
 import csv
 
 DB_FILE = "discobandit.db"
 
-db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
-c = db.cursor()  #facilitate db ops -- you will use cursor to trigger db events
+db = sqlite3.connect(DB_FILE) # open if file exists, otherwise create
+c = db.cursor()  # facilitate db ops -- you will use cursor to trigger db events
 
 # ==========================================================
 
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS students (
 );
 ''')
 
-# insert students data into db
+# insert students data into db using dictReader
 with open('students.csv', newline="") as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS courses (
 );
 ''')
 
-# insert courses data into db
+# insert courses data into db using dictReader
 with open('courses.csv', newline="") as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
@@ -48,5 +48,5 @@ with open('courses.csv', newline="") as csvfile:
 
 # ==========================================================
 
-db.commit() #save changes
-db.close() # close db
+db.commit()
+db.close()  # saving changes and closing the database
