@@ -29,7 +29,7 @@ with open('students.csv', newline="") as csvfile:
         c.execute('INSERT OR IGNORE INTO students (id, name, age) VALUES (?, ?, ?)',
                   (row['id'], row['name'], row['age']))
 
-# Ccreate 'courses' table if it doesn't exist
+# create 'courses' table if it doesn't exist
 c.execute('''
 CREATE TABLE IF NOT EXISTS courses (
     id INTEGER,      -- links to the student's id in the 'students' table
