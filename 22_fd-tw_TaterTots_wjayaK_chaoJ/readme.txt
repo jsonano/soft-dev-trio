@@ -1,3 +1,8 @@
+Tater Tots - Jason Chao & Kishi Wijaya
+Softdev
+22 - Foundations and Tailwind
+Time Spent: 2 hours
+
 DISCO
 QCC
 q0 0
