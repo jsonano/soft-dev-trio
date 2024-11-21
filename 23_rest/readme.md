@@ -78,7 +78,8 @@ related:
 <br>
 [offground](https://xkcd.com/1133/)
 
-DISCO:
+## DISCO:
  - Raw data in API page is in the form of a dictionary. JSON in API page formats this data.
-
-QCC:
+ - Use requests.get("url").json() to retrieve this data.
+ - To use json.loads(), must first turn JSON data into a string using json.dumps().
+ - Use json.loads() to turn the JSON data into a Python dictionary.
