@@ -1,5 +1,5 @@
-# TNPG: The Dynamic Duo
-# Roster: Jason Chao
+# TNPG: Abacus
+# Roster: Jason Chao and Leon Huang
 # SoftDev
 # K23 - Rest APIs
 # 11-21-24
@@ -26,13 +26,12 @@ def rest_api():
     # print(requests.get(api_url)) # prints out the response code
     json_data = requests.get(api_url).json() # prints out all data in JSON tab of console
     # print(requests.get(api_url).json())
-    
+
     # print(json.dumps(json_data, sort_keys=True, indent=4)) # prints out the data in a more readable format
     python_data = json.loads(json.dumps(json_data, sort_keys=True, indent=4)) # converts the JSON data into a Python dictionary
     # print(python_data)
-    
+
     return render_template('main.html', hd_image = python_data['hdurl'], explanation = python_data['explanation'])
 
 if __name__ == '__main__':
     app.run(debug = True)
-
