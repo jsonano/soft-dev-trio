@@ -29,7 +29,7 @@ def rest_api():
 
     # print(json.dumps(json_data, sort_keys=True, indent=4)) # prints out the data in a more readable format
     python_data = json.loads(json.dumps(json_data, sort_keys=True, indent=4)) # converts the JSON data into a Python dictionary
-    print(python_data)
+    # print(python_data)
 
     return render_template('main.html', image_name = python_data['title'], url = python_data['hdurl'], explanation = python_data['explanation'])
 
