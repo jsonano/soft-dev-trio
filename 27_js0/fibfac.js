@@ -9,7 +9,7 @@
 //<your team's fact(n) implementation>
 var fact = function(n) {
     if (n == 1) {
-        console.log("called fact()");
+        // console.log("called fact()");
         return n;
     }
     else {

@@ -102,8 +102,38 @@ var stripe = function()
 
 //insert your implementations here for...
 // FIB
+var fib = function(n) {
+    if (n == 0) {
+        return 0;
+    }
+    else if (n == 1) {
+        return 1;
+    }
+    else {
+        return fib(n - 1) + fib(n - 2);
+    }
+};
+
 // FAC
+var fac = function(n) {
+    if (n == 1) {
+        return n;
+    }
+    else {
+        return n * fac(n-1);
+    }
+};
+
 // GCD
+var gcd = function(a,b) {
+    let denominator = a;
+    while (!(a % denominator == 0) && (b % denominator == 0)) {
+        denominator--;
+    }
+    denominator++;
+    return denominator;
+};
+
 
 
 // In addition to the style shown above,
@@ -111,7 +141,11 @@ var stripe = function()
 //  Note anything notable.
 const myFxn = (param1, param2) => {
     // body
+    retVal = param1 + param2;
     return retVal;
 };
 
-
+// adding function calls to HTML list
+addItem("fac(5) = " + fac(5));
+addItem("fib(5) = " + fib(5));
+addItem("gcd(24,6) = " + gcd(24,6));
