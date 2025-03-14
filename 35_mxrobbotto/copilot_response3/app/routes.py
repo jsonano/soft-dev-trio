@@ -18,10 +18,10 @@ def close_connection(exception):
 
 @main.route("/")
 @main.route("/home")
-@login_required
+# @login_required
 def home():
-    user_stories = query_db('SELECT * FROM story WHERE author_id = ?', [current_user.id])
-    contributions = query_db('SELECT * FROM contribution WHERE user_id = ?', [current_user.id])
+    user_stories = query_db('SELECT * FROM story WHERE author_id = ?', [current_user.get_id()])
+    contributions = query_db('SELECT * FROM contribution WHERE user_id = ?', [current_user.get_id()])
     return render_template('home.html', stories=user_stories, contributions=contributions)
 
 @main.route("/register", methods=['GET', 'POST'])
@@ -60,7 +60,7 @@ def logout():
     return redirect(url_for('main.home'))
 
 @main.route("/story/new", methods=['GET', 'POST'])
-@login_required
+# @login_required
 def new_story():
     form = StoryForm()
     if form.validate_on_submit():
