@@ -25,3 +25,4 @@ Told Copilot to recreate the same project using only SQLite3 and our P0 requirem
 Response
     1. Initially did not work. There was a sqlite3.OperationalError that we had to fix ourselves by adding "IF NOT EXISTS" in the "schema.sql" file.
     2. Flask ran successfully, but then another error arose with werkzeug (werkzeug.routing.exceptions.BuildError) that we do not yet know how to fix.
+		3. Update: The error was due to "@InsertLogin". Removing these lines allowed our website to open.
