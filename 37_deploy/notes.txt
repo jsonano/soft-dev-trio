@@ -1,0 +1,30 @@
+1. Installing
+ - sudo apt update
+ - sudo apt install ...
+ Notes:
+  - At the end of installation, there was a screen asking for confirmation to restart NGINX.
+
+2. Python Env
+ - sudo apt install python3-venv
+ - mkdir ~/myproject
+ - cd ~/myproject
+ - python3.10 -m venv myprojectenv
+ - source myprojectenv/bin/activate
+
+3. Flask
+ - pip install wheel
+ - pip install uwsgi Flask 
+ - nano ~/myproject/myproject.py
+ Notes:
+  - uWSGI is an open source software application that "aims at developing a full stack for building hosting services" - Wikipedia
+  - Installation of uwsgi and Flask took about a minute.
+  - app.run(host='0.0.0.0')
+  - Flask provides two IP addresses: 127.0.0.01:5000 and [droplet_IP]:5000. Only the droplet IP works.
+
+4. uWSGI
+ - MUST create a WSGI entry point: wsgi.py
+ - Without this file, the server will return an "Internal Server Error".
+ - Create uWSGI config file: myproject.ini
+
+5. systemd
+ - Tutorial uses username "sammy". MUST replace with your droplet username.

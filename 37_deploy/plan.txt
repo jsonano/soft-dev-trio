@@ -1,0 +1,2 @@
+1. Follow the DigitalOcean tutorial to start Flask using NGINX.
+2. Consult QAF if necessary.
