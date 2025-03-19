@@ -2,7 +2,7 @@
  - sudo apt update
  - sudo apt install ...
  Notes:
-  - At the end of installation, there was a screen asking for confirmation to restart NGINX.
+  - At the end of installation, there was a screen asking for confirmation to load a new, updated kernel and restart services.
 
 2. Python Env
  - sudo apt install python3-venv
@@ -13,7 +13,7 @@
 
 3. Flask
  - pip install wheel
- - pip install uwsgi Flask 
+ - pip install uwsgi Flask
  - nano ~/myproject/myproject.py
  Notes:
   - uWSGI is an open source software application that "aims at developing a full stack for building hosting services" - Wikipedia
@@ -28,3 +28,5 @@
 
 5. systemd
  - Tutorial uses username "sammy". MUST replace with your droplet username.
+
+6. Config NGINX
